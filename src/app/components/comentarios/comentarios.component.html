@@ -1,0 +1,13 @@
+<div class= "UltimosComentarios">
+
+<p class = "titulo">Últimos comentários</p>
+
+<div class= "comentarios" *ngFor= "let comentario of (comentarios | async)?.slice().reverse()">
+
+        <p class= "mensagem">{{comentario.texto}}</p>
+        <p class= "nome">{{comentario.nome}}</p>
+
+
+</div>
+
+</div>

@@ -1,0 +1,47 @@
+.UltimosComentarios{
+    margin-top: 6em;
+    padding: 6em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.titulo{
+
+    color: rgb(132, 8,126);
+    font-size: 35px;
+    text-align: justify;
+    font-family: Rubik-Medium;
+
+
+
+
+}
+
+.comentarios{
+    padding-top: 2em;
+    text-align: justify;
+
+
+
+}
+
+.nome{
+    font-family: Rubik-Medium;
+    color: #515151;
+    text-align: justify;
+
+
+
+}
+
+.mensagem{
+
+    font-family: Rubik-Regular;
+    color: #515151;
+    text-align: justify;
+
+
+
+}
