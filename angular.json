@@ -124,5 +124,10 @@
   "defaultProject": "DesafioDataBizz",
   "cli": {
     "analytics": "86fd17e0-c551-4b2f-9470-eff113b0631c"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
   }
 }

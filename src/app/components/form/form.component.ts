@@ -7,7 +7,7 @@ import { Comentario } from '../backend/comentario';
 @Component({
   selector: 'app-edit',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
   comentario: Comentario

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-list',
   templateUrl: './comentarios.component.html',
-  styleUrls: ['./comentarios.component.css']
+  styleUrls: ['./comentarios.component.scss']
 })
 export class ComentariosComponent implements OnInit {
   
