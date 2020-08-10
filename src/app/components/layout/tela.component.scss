@@ -4,19 +4,19 @@
     position: relative;
 
     .bg-logo {
-        width: 30em;
-        height: 50em;
+        width: 20em;
+        height: 40em;
         top: 200px;
         background: $primary-color;
     }
     .divfilho {
         position: absolute;
         top: 350px;
-        left: 100px;
+        left: 65px;
 
         .logo {
-            width: 300px;
-            height: 400px;
+            width: 200px;
+            height: 300px;
         }
     }
 }
