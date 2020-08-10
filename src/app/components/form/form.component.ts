@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ComentarioDataService } from '../backend/comentario-data.service';
 import { ComentarioService } from '../backend/comentario.service';
 import { Comentario } from '../backend/comentario';
 
@@ -12,7 +10,7 @@ import { Comentario } from '../backend/comentario';
 export class FormComponent implements OnInit {
   comentario: Comentario
   key: string = '';
-  constructor(private comentarioService: ComentarioService, private comentarioDataService: ComentarioDataService) { }
+  constructor(private comentarioService: ComentarioService) { }
 
 
   ngOnInit(): void {
@@ -21,16 +19,16 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-      
-      this.comentarioService.insert(this.comentario);
-    
+
+    this.comentarioService.insert(this.comentario);
+
 
     this.comentario = new Comentario();
 
-    
 
 
-    
+
+
   }
 
 }

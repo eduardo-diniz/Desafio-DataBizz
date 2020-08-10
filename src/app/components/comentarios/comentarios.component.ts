@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ComentarioDataService } from '../backend/comentario-data.service';
 import { ComentarioService } from '../backend/comentario.service';
 import { Comentario } from '../backend/comentario';
 import { Observable } from 'rxjs';
@@ -11,18 +10,18 @@ import { Observable } from 'rxjs';
   styleUrls: ['./comentarios.component.scss']
 })
 export class ComentariosComponent implements OnInit {
-  
+
   comentarios: Observable<any>;
 
 
-  constructor(private contatoService: ComentarioService, private contatoDataService: ComentarioDataService) { }
+  constructor(private contatoService: ComentarioService) { }
 
 
   ngOnInit(): void {
 
     this.comentarios = this.contatoService.getAll();
-   
-  
+
+
   }
 
 
