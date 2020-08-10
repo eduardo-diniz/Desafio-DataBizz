@@ -1,13 +1,14 @@
-<div class= "UltimosComentarios">
+<div class="UltimosComentarios">
 
-        <p class = "titulo">Últimos comentários</p>
+        <p class="titulo">Últimos comentários</p>
+        <!-- Cria uma div com cada campo da lista de comentarios e 
+                inverte a ordem de exibição para comentarios mais recentes no topo-->
+        <div class="comentarios" *ngFor="let comentario of (comentarios | async)?.slice().reverse()">
 
-<div class= "comentarios" *ngFor= "let comentario of (comentarios | async)?.slice().reverse()">
-
-        <p class= "mensagem">{{comentario.texto}}</p>
-        <p class= "nome">{{comentario.nome}}</p>
+                <p class="mensagem">{{comentario.texto}}</p>
+                <p class="nome">{{comentario.nome}}</p>
 
 
-</div>
+        </div>
 
 </div>

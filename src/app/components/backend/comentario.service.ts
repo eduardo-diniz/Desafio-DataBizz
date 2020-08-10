@@ -7,24 +7,24 @@ import { map } from 'rxjs/operators';
 })
 export class ComentarioService {
 
-  constructor(private db:AngularFireDatabase) { }
+  constructor(private database:AngularFireDatabase) { }
 
-
+//insere um comentario no banco
   insert(comentario: Comentario) {
-    this.db.list('comentario').push(comentario)
+    this.database.list('comentario').push(comentario)
       .then((result: any) => {
         console.log(result.key);
       });
 
   }
 
-
+//lista todos os campos do banco
   getAll() {
-    return this.db.list<any[]>('comentario')
+    return this.database.list<any[]>('comentario')
       .snapshotChanges()
       .pipe(
         map(changes => {
-         
+         //retorna um [] com os valores(.val) de cada posição do banco.
           return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
 
         })

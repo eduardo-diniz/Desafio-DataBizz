@@ -1,4 +1,7 @@
 <div class="formulario">
+
+    <!-- Cria um formulario e o reseta o historico do seus campos a cada (New Formulario) -->
+
     <form #commentForm="ngForm" class="form" (ngSubmit)="onSubmit(); commentForm.reset()">
 
         <h3 class="titulo">Comentários</h3>
@@ -8,14 +11,14 @@
                 #nome="ngModel">
     </textarea>
 
-    
-        </div>
 
-        
+        </div>
+        <!-- Cria uma regra de negocio para aparecimento do erro -->
+
         <div *ngIf="nome.touched && nome.invalid" class="ErroPreenchimento">
             Nome é obrigatório.
         </div>
-        
+
 
         <div class="form-group">
             <label class="subtitulo">Mensagem</label>
@@ -24,9 +27,13 @@
 
         </div>
 
+        <!-- Cria uma regra de negocio para aparecimento do erro -->
+
         <div *ngIf="mensagem.touched && mensagem.invalid" class="ErroPreenchimento">
             Mensagem é obrigatória.
         </div>
+
+        <!-- Cria um botão que ficara disabled para caso o form esteja invalido -->
 
         <button type="submit" class="botao" [disabled]="commentForm.form.invalid">Adicionar</button>
 
